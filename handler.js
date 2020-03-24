@@ -10,9 +10,9 @@ var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 var params = {
   TableName: 'serverless-gfd-it1-posts-database',
   Key: {
-    'KEY_NAME': {N: '001'}
+    'id': {S: '1234'}
   },
-  ProjectionExpression: 'ATTRIBUTE_NAME'
+  ProjectionExpression: 'message'
 };
 
 // Call DynamoDB to read the item from the table
