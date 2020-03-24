@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports.hello = async event => {
+  var AWS = require('aws-sdk');
+
   return {
     statusCode: 200,
     body: JSON.stringify(
