@@ -5,6 +5,7 @@ aws s3 rb s3://serverless-spike-dplyfrntnd-a-s3-1
 aws s3api create-bucket --bucket serverless-spike-dplyfrntnd-a-s3-1 --region us-east-1  
 
 cd serverless-spike-dplyfrntnd-a-s3-1 
+yarn install
 yarn build 
 cd ..
 
