@@ -1,0 +1,16 @@
+{
+   "Statement": [
+      {
+         "Effect": "Allow",
+         "Principal": "*",
+         "Action": "s3:GetObject",
+         "Resource": "arn:aws:s3:::serverless-spike-dplyfrntnd-a-s3-1/*"
+      },
+      {
+         "Effect": "Allow",
+         "Principal": "*",
+         "Action": ["s3:ListBucket"],
+         "Resource": ["arn:aws:s3:::serverless-spike-dplyfrntnd-a-s3-1"]
+       }
+   ]
+}
