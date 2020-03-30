@@ -71,7 +71,7 @@ class Timeline extends Component {
   async buildState (user) {
     this.setState({ user })
 
-    const posts = await postService.getPostsOfUser(user.id)
+    const posts = await postService.fake_getPostsOfUser(user.id);
     const list = await Promise.all(
       posts.map(async post => {
         return { post, user }
