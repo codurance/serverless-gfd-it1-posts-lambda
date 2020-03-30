@@ -35,17 +35,10 @@ class PostService {
   }
 
   async fake_getPostsOfUser (userId) {
-    const response = {data: []}
-    response.data.push(new Post({
-      postId: "102030", 
-      userId: "1234", 
-      text: "Fake post while backend is under construction", 
-      dateTime: new Date()}))
-    response.data.push(new Post({
-      postId: "102031", 
-      userId: "12345", 
-      text: "Fake post from another user while backend is under construction", 
-      dateTime: new Date()}))
+    const response = await axios.get(`https://localhost:3001/dev/message`)
+
+    console.log("response", response)
+
     return response.data.map(post => parse(post))
   }
 

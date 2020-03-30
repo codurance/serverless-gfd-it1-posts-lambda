@@ -10,7 +10,8 @@ Reproducibilidad
 
 npm install aws-sdk (si estas en local)
 npm install serverless-offline --save-dev
-serverless offline -H --httpPort 3001
+serverless offline -H certs  --httpPort 3001
+añadir certificados a chrome y/o entrar directamente via chrome al endpoint  https://localhost:3001/dev/message y apretar ignore security
 
 crear base de datos dynamodb con el naming de arriba
 y poner contenido:
