@@ -35,7 +35,7 @@ class Login extends Component {
             className='bg-light border rounded p-5 col-sm-6 mt-5 mb-1'
             onSubmit={this.handleSubmit.bind(this)}
           >
-            <h2 className='form-signin-heading'>Please sign in</h2>
+            <h2 className='form-signin-heading'>Welcome, please sign in.</h2>
             <hr />
             <label htmlFor='inputUser' className='sr-only'>User Name</label>
             <input

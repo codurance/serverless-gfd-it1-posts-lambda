@@ -84,3 +84,33 @@ Do A/B testing with stages
 
 
 
+
+## Iteracion 2
+
+
+serverless-frontend-a-s3
+
+
+Reproducibilidad
+================
+
+
+DoD
+===
+Poder ver los posts en el frontend sin hacer login i con un fake get-wall
+Deployarlo todo en un solo script
+
+Foco
+=====
+Hacerlo rapido 40min
+Fake del frontend (fake de autenticacion y fake de get wall) sea lo mas entendible possible 
+
+
+To consider on following iterations
+==================================
+- hacer que el script de deployment no tenga fatatal error en su ejecucion inicial
+
+
+
+
+
