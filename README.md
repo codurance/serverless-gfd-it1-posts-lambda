@@ -9,6 +9,8 @@ Reproducibilidad
 ================
 
 npm install aws-sdk (si estas en local)
+npm install serverless-offline --save-dev
+serverless offline -H --httpPort 3001
 
 crear base de datos dynamodb con el naming de arriba
 y poner contenido:
