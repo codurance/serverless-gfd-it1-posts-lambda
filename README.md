@@ -10,7 +10,7 @@ Reproducibilidad
 crear base de datos dynamodb con el naming de arriba
 y poner contenido:
 
-Id - 1234  message - value from db
+Id - 1234  posts - [    { "M" : {        "dateTime" : { "N" : "1549312452000" },        "postId" : { "S" : "102030" },        "text" : { "S" : "Fake post while backend is under construction" },        "userId" : { "S" : "1234" }      }    },    { "M" : {        "dateTime" : { "N" : "1549312453000" },        "postId" : { "S" : "102031" },        "text" : { "S" : "Fake post from another user while backend is under construction" },        "userId" : { "S" : "1234" }      }    }  ]
 
 (todos strings)
 

@@ -12,7 +12,7 @@ module.exports.hello = async event => {
     Key: {
       'id': { S: '1234' }
     },
-    ProjectionExpression: 'message'
+    ProjectionExpression: 'posts'
   };
 
   return await new Promise((resolve, reject) => {
@@ -24,7 +24,7 @@ module.exports.hello = async event => {
           statusCode: 200,
           body: JSON.stringify(
             {
-              message: data.Item.message.S
+              message: data.Item.posts
             },
             null,
             2
