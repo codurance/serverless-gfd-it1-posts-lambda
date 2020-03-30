@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import userService from 'services/User'
+import { compose } from 'recompose'
+import { withRouter } from 'react-router-dom'
 
 class Header extends Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired
-  }
 
   logout () {
     userService.logout()
-    this.context.router.history.push('/')
+    this.props.history.push('/')
   }
 
   render () {
@@ -40,4 +38,6 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default compose(
+  withRouter,
+)(Header)
