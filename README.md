@@ -7,6 +7,9 @@ serverless-gfd-it1-api-gateway
 
 Reproducibilidad
 ================
+
+npm install aws-sdk (si estas en local)
+
 crear base de datos dynamodb con el naming de arriba
 y poner contenido:
 
@@ -109,6 +112,9 @@ Fake del frontend (fake de autenticacion y fake de get wall) sea lo mas entendib
 To consider on following iterations
 ==================================
 - hacer que el script de deployment no tenga fatatal error en su ejecucion inicial
+- renaming de messages/ endpoint to posts/ endpoint
+- renaming de hello handler.js por posts
+- añadir a reproducibilidad el update de la DB por cli
 
 
 
