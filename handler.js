@@ -1,8 +1,11 @@
 'use strict';
 
+
 module.exports.hello = async event => {
   var AWS = require('aws-sdk');
   AWS.config.update({ region: 'us-east-1' });
+  var parse = AWS.DynamoDB.Converter.output;
+
 
   // Create the DynamoDB service object
   var ddb = new AWS.DynamoDB({ apiVersion: '2012-08-10' });
@@ -21,11 +24,13 @@ module.exports.hello = async event => {
         console.log("Error", err);
       } else {
         resolve({
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+          },
           statusCode: 200,
           body: JSON.stringify(
-            {
-              message: data.Item.posts
-            },
+             parse({ "M": data.Item}).posts,
             null,
             2
           ),

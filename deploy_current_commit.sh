@@ -14,5 +14,5 @@ cd ..
 aws s3 cp ./serverless-frontend-a-s3/build s3://serverless-frontend-a-s3 --recursive  
 aws s3api put-bucket-policy --bucket serverless-frontend-a-s3 --policy file://web-policy.json  
 aws s3api put-bucket-cors --bucket serverless-frontend-a-s3 --cors-configuration file://cors-policy.json  
-open https://serverless-frontend-a-s3.s3.amazonaws.com/index.html
 aws s3 sync serverless-frontend-a-s3/build s3://serverless-frontend-a-s3/  --cache-control max-age=1
+open https://serverless-frontend-a-s3.s3.amazonaws.com/index.html

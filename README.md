@@ -14,9 +14,14 @@ serverless offline -H certs  --httpPort 3001
 añadir certificados a chrome y/o entrar directamente via chrome al endpoint  https://localhost:3001/dev/message y apretar ignore security
 
 crear base de datos dynamodb con el naming de arriba
-y poner contenido:
+y poner contenido via el siguiente comando:
 
-Id - 1234  posts - [    { "M" : {        "dateTime" : { "N" : "1549312452000" },        "postId" : { "S" : "102030" },        "text" : { "S" : "Fake post while backend is under construction" },        "userId" : { "S" : "1234" }      }    },    { "M" : {        "dateTime" : { "N" : "1549312453000" },        "postId" : { "S" : "102031" },        "text" : { "S" : "Fake post from another user while backend is under construction" },        "userId" : { "S" : "1234" }      }    }  ]
+aws dynamodb put-item \
+    --table-name serverless-gfd-it1-posts-database \
+    --item '{
+      "id": {"S": "1234"}, "posts": { "L": [    { "M" : {        "dateTime" : { "N" : "1549312452000" },        "postId" : { "S" : "102030" },        "text" : { "S" : "Fake post done via CLI while backend is under construction" },        "userId" : { "S" : "1234" }      }    },    { "M" : {        "dateTime" : { "N" : "1549312453000" },        "postId" : { "S" : "102031" },        "text" : { "S" : "Fake post from another user while backend is under construction" },        "userId" : { "S" : "1234" }      }    }  ] }
+    }'
+
 
 (todos strings)
 
