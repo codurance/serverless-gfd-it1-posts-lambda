@@ -11,6 +11,7 @@
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "recompose": "^0.30.0",
     "sweetalert": "^2.1.2",
     "timeago-react": "^3.0.0",
     "watchman": "^1.0.0"

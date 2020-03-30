@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import showError from 'utils/showError'
 import { Link } from 'react-router-dom'
 import userService from 'services/User'
+import { compose } from 'recompose'
+import { withRouter } from 'react-router-dom'
 
 class Login extends Component {
   constructor (props, context) {
@@ -19,9 +21,9 @@ class Login extends Component {
 
   async handleSubmit (event) {
     event.preventDefault()
-    try {
-      await userService.login(this.state)
-      this.context.router.history.push('/')
+    try { 
+      await userService.fake_login(this.state)
+      this.props.history.push('/')
     } catch (error) {
       showError(error)
     }
@@ -80,4 +82,6 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default compose(
+  withRouter,
+)(Login)

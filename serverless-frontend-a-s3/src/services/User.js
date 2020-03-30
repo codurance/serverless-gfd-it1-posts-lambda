@@ -49,6 +49,14 @@ class UserService {
     return this.user
   }
 
+  async fake_login ({ userName, password }) {
+    const fakeUser = new User({id: "1234", name: "Dummy User", about: "For dev purposes"})
+    console.log("Fake Login: ", fakeUser)
+    this.user = fakeUser
+    localStorage.setItem('user', JSON.stringify(this.user))
+    return this.user
+  }
+
   async logout () {
     this.user = null
     localStorage.clear()
