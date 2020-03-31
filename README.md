@@ -13,8 +13,15 @@ serverless-frontend-a-s3
 Features
 =========
 
+Docker image:
+6f47204 Docker, base image for serverless development. 
+0e40438 Added docker-compose 
+7ae7abe Added docker-compose volume binding fixed
+3a3bf05 Added more AWS stack
+f4b7a2a Added yarn upgrade
+Application:
 c1b2ee9 Lambda endpoint is reachable from internet
-fe8e667 Framework: rudimantary e2e testing for lambda 
+fe8e667 rudimantary e2e testing for lambda 
 0bc00ca Lambda works in local
 039eec5 Lambda do get value from db with harcoded key
 67a8003 Frontend can be deployed seamlessly (automated+idempotent)
@@ -121,6 +128,9 @@ Resultado:
 ## Iteracion 2
 To consider on following iterations
 ==================================
+- find how to delate/re create a lambda in case of inconsistent states caused by manual actions on the aws console
+- do a terraform spike
+- make it run in production (enable CORS in lambdas)
 - hacer que el script de deployment no tenga fatatal error en su ejecucion inicial porque ese error no es critico
 - renaming de messages/ endpoint to posts/ endpoint para alinearse con la "kata"
 - renaming de "hello" handler.js por "posts"
