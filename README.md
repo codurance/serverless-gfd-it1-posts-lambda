@@ -13,34 +13,36 @@ serverless-frontend-a-s3
 Features
 =========
 
-Docker image:
-6f47204 Docker, base image for serverless development. 
-0e40438 Added docker-compose 
-7ae7abe Added docker-compose volume binding fixed
-3a3bf05 Added more AWS stack
-f4b7a2a Added yarn upgrade
-Application:
-c1b2ee9 Lambda endpoint is reachable from internet
-fe8e667 rudimantary e2e testing for lambda 
-0bc00ca Lambda works in local
-039eec5 Lambda do get value from db with harcoded key
-67a8003 Frontend can be deployed seamlessly (automated+idempotent)
-  37afe03 do create bucket 
-  fb1804e do fill bucket with folder
-  f0ab29f do delete bucket
-  65f185c do bucket public
-  0112d41 do enable CORS api calls
-  0fc9dd7 frontend do run in local
-  6fcbbe8 do work in new/fresh machine work for all internet
-  c34e7fb do disable cache of s3
-c5655f2 do fix project react flacky App.js
-2595d60 do fix openchat_webclient git ignoring a necesary file
-5096a62 disable AWS pager in deployment script
-8982150 do login on frontend with fake impl seamlesly (user stub)
-1cc274a do fix missuse of Router in openchat_webclient 
-d4a537e now can test local env (offline apigateway+lambda)
-682de05 Documented how to avoid SSL problems
-ed58c10 do work in production 
+X->setup one-timers
+
+  Docker image:
+X 6f47204 Docker, base image for serverless development. 
+X 0e40438 Added docker-compose 
+X 7ae7abe Added docker-compose volume binding fixed
+X 3a3bf05 Added more AWS stack
+X f4b7a2a Added yarn upgrade
+  Application:
+  c1b2ee9 Lambda endpoint is reachable from internet
+  fe8e667 rudimantary e2e testing for lambda 
+X 0bc00ca Lambda works in local
+  039eec5 Lambda do get value from db with harcoded key
+X  67a8003 Frontend can be deployed seamlessly (automated+idempotent)
+X  37afe03 do create bucket 
+X  fb1804e do fill bucket with folder
+X  f0ab29f do delete bucket
+X  65f185c do bucket public
+X  0112d41 do enable CORS api calls
+X  0fc9dd7 frontend do run in local
+X  6fcbbe8 do work in new/fresh machine work for all internet
+X  c34e7fb do disable cache of s3
+X  c5655f2 do fix project react flacky App.js
+X  2595d60 do fix openchat_webclient git ignoring a necesary file
+X  5096a62 disable AWS pager in deployment script
+   8982150 do login on frontend with fake impl seamlesly (user stub)
+X  cc274a do fix missuse of Router in openchat_webclient 
+X d4a537e now can test local env (offline apigateway+lambda)
+X 682de05 Documented how to avoid SSL problems
+X ed58c10 do work in production 
 
 Reproducibilidad
 ================
