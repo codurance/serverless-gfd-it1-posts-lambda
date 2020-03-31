@@ -82,6 +82,9 @@ serverless invoke local --function hello
 modificar el endpoint generado por el deploy en el test.bash
 modificar el endpoint generado por el deploy en el Posts.js
 
+## Reset the production infra set up 
+serverless remove -v
+serverless deploy
 
 Tests of the prototype
 =======================
@@ -93,7 +96,7 @@ bash test.bash && git add -A && git commit && git push
 
 DoD
 ===
-Poder hacer un get de un tweet de los posts la database por id 
+Poder hacer un get de los posts por usuario de la database por id 
 Los posts propios de un usuario se llama timeline
 Para ello, hacer login con cualquier nombre o password y entrar en timeline
 Deployarlo todo en un solo script
@@ -106,7 +109,7 @@ Resultado:
 - install aws sdk
 
 ### Cronometrar
-Resultado:
+Resultado: (temporal, de la primera parte)
 - 45 mins all environent (GIT) 
 - without git 15 mins for hello world
 - 1:10 para (db creation, db usage, local testing)
@@ -128,9 +131,10 @@ Resultado:
 ## Iteracion 2
 To consider on following iterations
 ==================================
-- find how to delate/re create a lambda in case of inconsistent states caused by manual actions on the aws console
-- do a terraform spike
+- do a terraform spike to substitute script
+- update docker image with Reproducibilidad steps
 - make it run in production (enable CORS in lambdas)
+- V - make production lambda work
 - hacer que el script de deployment no tenga fatatal error en su ejecucion inicial porque ese error no es critico
 - renaming de messages/ endpoint to posts/ endpoint para alinearse con la "kata"
 - renaming de "hello" handler.js por "posts"
