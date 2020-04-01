@@ -35,15 +35,8 @@ class PostService {
   }
 
   async fake_getPostsOfUser (userId) {
-    var response = "";
-    try {
-      response = await axios.get(`https://localhost:3001/dev/message`)
-    }catch(e){
-      response = await axios.get(`https://afwrqaj1rg.execute-api.us-east-1.amazonaws.com/dev/message`)
-    }
-    
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}dev/message`)
     console.log("response", response)
-
     return response.data.map(post => parse(post))
   }
 
