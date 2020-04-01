@@ -140,10 +140,14 @@ To consider on following iterations
 - hacer que el script de deployment no tenga fatatal error en su ejecucion inicial porque ese error no es critico
 - renaming de messages/ endpoint to posts/ endpoint para alinearse con la "kata"
 - renaming de "hello" handler.js por "posts"
+<<<<<<< Updated upstream
 - make use of stages to differentiate production from development
 - make use of variables in deployment script
 
 
+=======
+- Create a script that removes any reosource by looking at the name of the resources ex. "serverless-gfd*"
+>>>>>>> Stashed changes
 
 
 
