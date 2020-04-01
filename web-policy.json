@@ -4,13 +4,13 @@
          "Effect": "Allow",
          "Principal": "*",
          "Action": "s3:GetObject",
-         "Resource": "arn:aws:s3:::serverless-it2-frontend-a-s3/*"
+         "Resource": "arn:aws:s3:::serverless-it2-frontend-renameme-a-s3/*"
       },
       {
          "Effect": "Allow",
          "Principal": "*",
          "Action": ["s3:ListBucket"],
-         "Resource": ["arn:aws:s3:::serverless-it2-frontend-a-s3"]
+         "Resource": ["arn:aws:s3:::serverless-it2-frontend-renameme-a-s3"]
        }
    ]
 }
