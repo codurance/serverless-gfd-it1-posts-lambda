@@ -16,6 +16,9 @@ You have the environment variables on `.env`, you can change them to suit your n
 
 If you need more environments, [check the documentation](https://github.com/facebook/create-react-app/blob/next/packages/react-scripts/template/README.md#what-other-env-files-can-be-used).
 
+You can also pass `env` variables at the beginning of each command
+Example `REACT_APP_API_URL="http://localhost:4321/" yarn start`
+
 ## Development server
 
 Run `yarn start` for a development server.
