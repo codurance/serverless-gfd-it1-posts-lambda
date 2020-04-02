@@ -24,10 +24,6 @@ module.exports.hello = async event => {
         console.log("Error", err);
       } else {
         resolve({
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-          },
           statusCode: 200,
           body: JSON.stringify(
              parse({ "M": data.Item}).posts,
