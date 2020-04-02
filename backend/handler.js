@@ -1,7 +1,9 @@
 'use strict';
 
+const middy = require('middy')
+const { cors } = require('middy/middlewares')
 
-module.exports.hello = async event => {
+var  handler = async event => {
   var AWS = require('aws-sdk');
   AWS.config.update({ region: 'us-east-1' });
   var parse = AWS.DynamoDB.Converter.output;
@@ -34,12 +36,6 @@ module.exports.hello = async event => {
       }
     });
   });
-  // Call DynamoDB to read the item from the table
-
-
-
-
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
 };
+
+module.exports.hello = middy(handler).use(cors())
