@@ -40,6 +40,7 @@
     "start-js": "react-scripts start",
     "prestart": "rm ./node_modules/webpack-dev-server/ssl/server.pem; cp -f ../certs/cert.pem ./node_modules/webpack-dev-server/ssl",
     "start": "HTTPS=true  npm-run-all -p watch-css start-js",
+    "start-insecure": "npm-run-all -p watch-css start-js",
     "build-css": "node-sass-chokidar --include-path ./src/styles/scss --include-path ./node_modules src/styles/scss/ -o src/styles/css",
     "build": "npm run build-css && react-scripts build",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/styles/scss/ --include-path ./node_modules src/styles/scss/ -o src/styles/css --watch --recursive",
