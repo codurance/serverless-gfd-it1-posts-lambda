@@ -8,7 +8,7 @@ aws s3api create-bucket --bucket serverless-demo-it1-frontend-a-s3 --region us-e
 cd serverless-frontend-a-s3 
 pwd
 yarn install
-yarn build 
+REACT_APP_API_URL="https://zmt518vd6e.execute-api.us-east-1.amazonaws.com/dev/" yarn build 
 cd ..
 
 aws s3 cp ./serverless-frontend-a-s3/build s3://serverless-demo-it1-frontend-a-s3 --recursive  
