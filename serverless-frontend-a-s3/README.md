@@ -24,6 +24,8 @@ For the demo we used endpoint with id: 5vu2ddfi3i
 
 Run `yarn start` for a development server.
 
+Run `yarn start-insecure` for a development server without HTTPS
+
 ## Running unit tests
 
 Run `yarn test` to execute every test.
